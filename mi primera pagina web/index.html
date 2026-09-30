@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Jardín de las Almas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="contenedor">
+        <button type="button" class="btn-nav" id="btn-inicio">Inicio</button>
+        <button type="button" class="btn-nav" id="btn-flores">Flores</button>
+        <button type="button" class="btn-nav" id="btn-significados">Significados</button>
+        <button type="button" class="btn-nav" id="btn-jardin">Mi Jardín (0)</button>
+    </nav>
+
+    <!-- Encabezado con imagen de fondo -->
+    <main id="inicio">
+        <h1>El Jardín de las Almas</h1>
+    </main>
+
+    <!-- Buscador -->
+    <div class="seccion-buscador">
+        <input type="text" id="buscador" placeholder="Buscar flor..." aria-label="Buscar flor">
+    </div>
+
+    <!-- Catálogo de Tarjetas -->
+    <section id="flores" class="contenedor2">
+        
+        <div class="tarjeta" data-nombre="Loto">
+            <img src="loto.jpg" alt="Flor de Loto">
+            <h3>Loto</h3>
+            <p>La flor de loto es un símbolo universal de pureza, resiliencia y crecimiento espiritual...</p>
+            <div class="acciones-tarjeta">
+                <button type="button" class="btn-fav">❤️ Favorito</button>
+                <button type="button" class="btn-regalar"> Regalar</button>
+            </div>
+        </div>
+
+        <div class="tarjeta" data-nombre="Sakura">
+            <img src="sakura.jpg" alt="Flor de Sakura">
+            <h3>Sakura</h3>
+            <p>Simboliza principalmente la belleza efímera de la vida y su naturaleza transitoria.</p>
+            <div class="acciones-tarjeta">
+                <button type="button" class="btn-fav">❤️ Favorito</button>
+                <button type="button" class="btn-regalar"> Regalar</button>
+            </div>
+        </div>
+
+        <div class="tarjeta" data-nombre="Lirio">
+            <img src="lirio.jpg" alt="Flor de Lirio">
+            <h3>Lirio</h3>
+            <p>El significado general del lirio es pureza, renovación y amor sincero...</p>
+            <div class="acciones-tarjeta">
+                <button type="button" class="btn-fav">❤️ Favorito</button>
+                <button type="button" class="btn-regalar"> Regalar</button>
+            </div>
+        </div>
+
+        <div class="tarjeta" data-nombre="Camelia">
+           <img src="camelia.jpg" alt="Flor de Camelia">
+           <h3>Camelia</h3>
+           <p>• La camelia blanca simboliza estima y gratitud.<br>• La camelia rosada simboliza cercanía.<br>• La camelia roja simboliza amor y esperanza.</p>
+           <div class="acciones-tarjeta">
+               <button type="button" class="btn-fav">❤️ Favorito</button>
+               <button type="button" class="btn-regalar"> Regalar</button>
+           </div>
+        </div>
+
+        <div class="tarjeta" data-nombre="Narciso">
+           <img src="narciso.jpg" alt="Flor de Narciso">
+           <h3>Narciso</h3>
+           <p>Representa principalmente el renacimiento, los nuevos comienzos y la esperanza...</p>
+           <div class="acciones-tarjeta">
+               <button type="button" class="btn-fav">❤️ Favorito</button>
+               <button type="button" class="btn-regalar"> Regalar</button>
+           </div>
+        </div>
+
+        <div class="tarjeta" data-nombre="Iris">
+           <img src="iris.jpg" alt="Flor de Iris">
+           <h3>Iris</h3>
+           <p>Simboliza principalmente sabiduría, esperanza, fe y valor...</p>
+           <div class="acciones-tarjeta">
+               <button type="button" class="btn-fav">❤️ Favorito</button>
+               <button type="button" class="btn-regalar"> Regalar</button>
+           </div>
+        </div>
+
+    </section>
+
+    <!-- Mensaje cuando no hay resultados de búsqueda -->
+    <p id="sin-resultados" class="mensaje-oculto">
+        No se encontraron flores con ese nombre.
+    </p>
+
+    <!-- Modal para enviar regalo -->
+    <div id="modal-regalo" class="modal-oculto">
+        <div class="modal-contenido">
+            <span id="cerrar-modal">&times;</span>
+            <h2>Regalar <span id="nombre-flor-modal"></span> 🌸</h2>
+            <form id="form-regalo">
+                <label for="nombre-destinatario">Nombre de quien recibe:</label>
+                <input type="text" id="nombre-destinatario" placeholder="Ej: Sofía" required>
+
+                <label for="mensaje-dedicatoria">Mensaje especial:</label>
+                <textarea id="mensaje-dedicatoria" rows="3" placeholder="Escribe algo bonito..." required></textarea>
+
+                <button type="submit" class="btn-enviar-wa">Enviar por WhatsApp 📲</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
